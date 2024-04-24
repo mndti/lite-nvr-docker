@@ -1,0 +1,2 @@
+#!/bin/sh
+ffmpeg -hide_banner -y -loglevel error -rtsp_transport tcp -use_wallclock_as_timestamps 1 -i $LINK -c copy -f segment -reset_timestamps 1 -segment_time $SEG_TIME -segment_format mkv -segment_atclocktime 1 -strftime 1 $RAW%Y-%m-%dT%H-%M-%S$NAME.mkv

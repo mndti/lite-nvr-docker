@@ -1,0 +1,3 @@
+*/2 * * * * /scripts/check.sh
+*/5 * * * * /scripts/move.sh
+0 */2 * * * /scripts/delete.sh

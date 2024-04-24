@@ -1,0 +1,42 @@
+{
+	"seg_time": 300,
+	"last_mod_minutes": 2,
+	"days_keep": 10,
+	"files_keep_temp": 8,
+	"path_completed": "/nvr/arquivos/",
+	"path_temp": "/nvr/raw/videos/",
+	"path_log": "/nvr/logs/",
+	"ha_status": false,
+	"ha_url":"https://ip-ha-url:8123",
+	"ha_token":"Token de longa duracao",
+	"cams": [
+		{
+		  "name": "_fachada-1",
+		  "name_ha":"nvr_fachada_1",
+		  "name_ha_friendly":"nvr - fachada 1",
+		  "ha_icon":"mdi:record-rec",
+		  "link": "rtsp://user:pass@ip:554/Streaming/Channels/101"
+		},
+		{
+		  "name": "_fachada-2",
+		  "name_ha":"nvr_fachada_2",
+		  "name_ha_friendly":"nvr - fachada 2",
+		  "ha_icon":"mdi:record-rec",
+		  "link": "rtsp://user:pass@ip:554/Streaming/Channels/101"
+		},
+		{
+		  "name": "_garagem",
+		  "name_ha":"nvr_garagem",
+		  "name_ha_friendly":"nvr - garagem",
+		  "ha_icon":"mdi:record-rec",
+		  "link": "rtsp://user:pass@ip:554/Streaming/Channels/101"
+		},
+		{
+		  "name": "_interfone",
+		  "name_ha":"nvr_interfone",
+		  "name_ha_friendly":"nvr - interfone",
+		  "ha_icon":"mdi:record-rec",
+		  "link": "rtsp://user:pass@ip:554/Streaming/Channels/102"
+		}
+	]
+}
