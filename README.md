@@ -34,3 +34,38 @@ Baixo, pois o script apenas faz o copy do fluxo de vídeo/áudio. Entretanto, se
 - `"path_temp": "/nvr/raw/videos/"` pasta temporária / raw, não pode ser igual path_completed, nem path_log.
 - `"path_log": "/nvr/logs/"` pasta para logs txt
 
+## crontab
+Se desejar alterar as configs, edite o arquivo `crontab` antes de iniciar o container.
+- `/scripts/check.sh` padrão 2 minutos
+- `/scripts/move.sh` padrão 5 minutos
+- `/scripts/delete.sh` padrão 30 minutos
+
+# Iniciar o container
+**Docker Compose**
+<pre><code>services:
+    nvr:
+        container_name: nvr
+        hostname: nvr
+        restart: always
+        stdin_open: true
+        tty: true
+        volumes:
+            - /path arquivos video:/nvr
+            - /path scripts:/scripts
+        environment:
+            - TZ=America/Sao_Paulo
+        deploy:
+            resources:
+                limits:
+                    memory: 512M
+        command: ['/scripts/start.sh']
+        image: alpine</code></pre>
+
+**Docker CLI**
+<pre><code>docker run -d -it \
+  --name=nvr \
+  -v /volume2/nvr:/nvr \
+  -v /volume1/docker/nvr/scripts:/scripts \
+  -e TZ=America/Sao_Paulo \
+  alpine /scripts/start.sh</code></pre>
+
