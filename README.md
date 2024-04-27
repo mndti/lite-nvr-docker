@@ -38,7 +38,7 @@ Baixo, pois o script apenas faz o copy do fluxo de vídeo/áudio. Entretanto, se
 Se desejar alterar as configs, edite o arquivo `crontab` antes de iniciar o container.
 - `/scripts/check.sh` padrão 2 minutos
 - `/scripts/move.sh` padrão 5 minutos
-- `/scripts/delete.sh` padrão 30 minutos
+- `/scripts/delete.sh` padrão 2 horas
 
 # Iniciar o container
 **Docker Compose**
